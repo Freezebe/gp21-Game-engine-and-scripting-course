@@ -10,7 +10,7 @@ public class PlayerImmediateJumpController : MonoBehaviour
     {
         
         
-        if (playerInputController.jumpInput && groundChecker.Isgrounded)
+        if (playerInputController.JumpInputDown && groundChecker.Isgrounded)
         {
             myRigidbody.AddForce(Vector3.up * jumpForce);
         }
