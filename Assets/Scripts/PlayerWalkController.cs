@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
 
 public class PlayerWalkController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public Rigidbody myRigidbody;
+    [SerializeField] public float moveSpeed = 5f;
+    [SerializeField] public Rigidbody myRigidbody;
+    [SerializeField] private PlayerInputController playerInputController;
+
     void Update()
     {
-        var moveInput = Input.GetAxis("Horizontal");
-        
-        myRigidbody.velocity = new Vector3(moveInput * moveSpeed, myRigidbody.velocity.y, 0);
+
+        myRigidbody.velocity = new Vector3(playerInputController.moveInput * moveSpeed, myRigidbody.velocity.y, 0);
         
     }
 }
