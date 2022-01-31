@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4749726156062505800}
   - component: {fileID: 3029537817168688480}
-  - component: {fileID: 187572046921975210}
+  - component: {fileID: 3517477223043123371}
   m_Layer: 9
   m_Name: AI + Commands
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MonoBehaviour:
   jumpCommandDown: 0
   jumpCommandUp: 0
   jumpCommand: 0
---- !u!114 &187572046921975210
+--- !u!114 &3517477223043123371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandContainer: {fileID: 3029537817168688480}
+  playerTransform: {fileID: 0}
 --- !u!1 &2691369193468407288
 GameObject:
   m_ObjectHideFlags: 0
