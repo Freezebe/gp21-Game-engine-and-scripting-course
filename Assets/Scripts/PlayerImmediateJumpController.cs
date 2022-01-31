@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerImmediateJumpController : MonoBehaviour
 {
-    [SerializeField] private PlayerInputController playerInputController;
+    [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] private float jumpForce = 500f;
     [SerializeField] private GroundChecker groundChecker;
@@ -13,7 +13,7 @@ public class PlayerImmediateJumpController : MonoBehaviour
 
     private void HandleJump()
     {
-        if (playerInputController.JumpInputDown && groundChecker.Isgrounded)
+        if (commandContainer.jumpCommandDown && groundChecker.Isgrounded)
         {
             myRigidbody.AddForce(Vector3.up * jumpForce);
         }

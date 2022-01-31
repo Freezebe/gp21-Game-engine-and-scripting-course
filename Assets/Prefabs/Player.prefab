@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   myRigidbody: {fileID: 4322974968072804207}
-  playerInputController: {fileID: 173553737758033183}
+  commandContainer: {fileID: 280547498780624006}
   chargingMoveSpeedFactor: 0.5
   _groundChecker: {fileID: 1935485833031811998}
 --- !u!114 &4322974968072804204
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746ebf035ed27e24fb1f43d22d8dfed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputController: {fileID: 173553737758033183}
+  commandContainer: {fileID: 280547498780624006}
   myRigidbody: {fileID: 4322974968072804207}
   jumpForce: 500
   groundChecker: {fileID: 1935485833031811998}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4423aee08be9d8e4b9e628be69149115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputController: {fileID: 173553737758033183}
+  commandContainer: {fileID: 280547498780624006}
   myRigidbody: {fileID: 4322974968072804207}
   minimumJumpForce: 100
   maximumJumpForce: 1000
@@ -198,8 +198,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7209467880397557121}
   - component: {fileID: 173553737758033183}
+  - component: {fileID: 280547498780624006}
   m_Layer: 6
-  m_Name: InputController
+  m_Name: Input + Commands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,3 +233,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a75d4879e10004995454b3c2dedeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commandContainer: {fileID: 280547498780624006}
+--- !u!114 &280547498780624006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954550819250076597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc68f96df0f93a4fb237be87d93c146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkCommand: 0
+  jumpCommandDown: 0
+  jumpCommandUp: 0
+  jumpCommand: 0

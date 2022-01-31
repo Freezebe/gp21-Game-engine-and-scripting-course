@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerChargeJumpController : MonoBehaviour
 {
-    [SerializeField] private PlayerInputController playerInputController;
+    [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] private float minimumJumpForce = 100f;
     [SerializeField] private float maximumJumpForce = 1000f;
@@ -17,10 +17,10 @@ public class PlayerChargeJumpController : MonoBehaviour
 
     private void HandleChargedJump()
     {
-        if (playerInputController.jumpInput)
+        if (commandContainer.jumpCommand)
             jumpCharge += Time.deltaTime / chargeTime;
 
-        if (playerInputController.JumpInputUp)
+        if (commandContainer.jumpCommandUp)
         {
             var jumpForce = Mathf.Lerp(minimumJumpForce, maximumJumpForce, jumpCharge);
             jumpCharge = 0f;
