@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4749726156062505800}
   - component: {fileID: 3029537817168688480}
+  - component: {fileID: 187572046921975210}
   m_Layer: 9
   m_Name: AI + Commands
   m_TagString: Untagged
@@ -48,6 +49,19 @@ MonoBehaviour:
   jumpCommandDown: 0
   jumpCommandUp: 0
   jumpCommand: 0
+--- !u!114 &187572046921975210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128718075013981803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f93e3d903205945b5827fb3d9b6d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandContainer: {fileID: 3029537817168688480}
 --- !u!1 &2691369193468407288
 GameObject:
   m_ObjectHideFlags: 0
