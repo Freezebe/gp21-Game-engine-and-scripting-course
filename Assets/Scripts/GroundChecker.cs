@@ -9,9 +9,14 @@ public class GroundChecker : MonoBehaviour
    [SerializeField] private LayerMask groundLayers;
     void Update()
     {
+        CheckIfGrounded();
+    }
+
+    private void CheckIfGrounded()
+    {
         var ray = new Ray(transform.position, Vector3.down);
-        Isgrounded = Physics.SphereCast(ray, groundCheckRadius,groundCheckLength, groundLayers);
-        
+        Isgrounded = Physics.SphereCast(ray, groundCheckRadius, groundCheckLength, groundLayers);
+
         //Debug.DrawRay(transform.position, Vector3.down * groundCheckLength, Color.magenta);
     }
 

@@ -12,8 +12,11 @@ public class PlayerChargeJumpController : MonoBehaviour
     
     void Update()
     {
-        
-        
+        HandleChargedJump();
+    }
+
+    private void HandleChargedJump()
+    {
         if (playerInputController.jumpInput)
             jumpCharge += Time.deltaTime / chargeTime;
 
@@ -21,8 +24,8 @@ public class PlayerChargeJumpController : MonoBehaviour
         {
             var jumpForce = Mathf.Lerp(minimumJumpForce, maximumJumpForce, jumpCharge);
             jumpCharge = 0f;
-            if(groundChecker.Isgrounded)
-             myRigidbody.AddForce(Vector3.up * jumpForce);
+            if (groundChecker.Isgrounded)
+                myRigidbody.AddForce(Vector3.up * jumpForce);
         }
     }
 }

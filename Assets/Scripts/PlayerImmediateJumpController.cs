@@ -8,12 +8,14 @@ public class PlayerImmediateJumpController : MonoBehaviour
     [SerializeField] private GroundChecker groundChecker;
     void Update()
     {
-        
-        
+        HandleJump();
+    }
+
+    private void HandleJump()
+    {
         if (playerInputController.JumpInputDown && groundChecker.Isgrounded)
         {
             myRigidbody.AddForce(Vector3.up * jumpForce);
         }
-        
     }
 }
