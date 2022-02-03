@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4322974968072804204}
   - component: {fileID: 2846350404536690566}
   - component: {fileID: 1935485833031811998}
+  - component: {fileID: 1454095199}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -149,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746ebf035ed27e24fb1f43d22d8dfed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myRigidbody: {fileID: 0}
   commandContainer: {fileID: 280547498780624006}
-  myRigidbody: {fileID: 4322974968072804207}
   jumpForce: 500
   groundChecker: {fileID: 1935485833031811998}
 --- !u!114 &2846350404536690566
@@ -165,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4423aee08be9d8e4b9e628be69149115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myRigidbody: {fileID: 0}
   commandContainer: {fileID: 280547498780624006}
-  myRigidbody: {fileID: 4322974968072804207}
   minimumJumpForce: 100
   maximumJumpForce: 1000
   chargeTime: 1
@@ -188,6 +189,18 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1454095199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322974968072804196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94356cb58da423844b16a5f80f19ca84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6954550819250076597
 GameObject:
   m_ObjectHideFlags: 0

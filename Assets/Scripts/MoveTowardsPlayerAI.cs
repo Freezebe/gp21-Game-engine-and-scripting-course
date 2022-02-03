@@ -9,7 +9,7 @@ public class MoveTowardsPlayerAI : MonoBehaviour
 
    private void Start()
    {
-      //playerTransform = GameObject.FindWithTag("Player").transform;
+      playerTransform = GameObject.FindWithTag("Player").transform;
       //playerTransform = GameObject.Find("Player").transform;
       //playerTransform = ((PlayerIdentifierComponent)FindObjectOfType(typeof(PlayerIdentifierComponent))).transform;
       //playerTransform = FindObjectOfType<PlayerInputController>().transform;

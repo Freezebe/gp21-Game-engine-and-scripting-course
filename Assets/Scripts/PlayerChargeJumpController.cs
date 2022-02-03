@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerChargeJumpController : MonoBehaviour
 {
-    [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private Rigidbody myRigidbody;
+    [SerializeField] private CommandContainer commandContainer;
     [SerializeField] private float minimumJumpForce = 100f;
     [SerializeField] private float maximumJumpForce = 1000f;
     [SerializeField] private float chargeTime = 1f;

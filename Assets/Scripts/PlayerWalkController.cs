@@ -20,8 +20,7 @@ public class PlayerWalkController : MonoBehaviour
         if (commandContainer.jumpCommand && _groundChecker.Isgrounded)
             currentMoveSpeed *= chargingMoveSpeedFactor;
         
-        myRigidbody.velocity = new Vector3(commandContainer.walkCommand * currentMoveSpeed, myRigidbody.velocity.y, 0);
-
+        myRigidbody.velocity= new Vector3(commandContainer.walkCommand * currentMoveSpeed,myRigidbody.velocity.y,0);
     }
     
 }
