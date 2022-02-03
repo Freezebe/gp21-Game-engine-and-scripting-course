@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerImmediateJumpController : MonoBehaviour
+public class ImmediateJumpController : MonoBehaviour
 {
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] private CommandContainer commandContainer;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerChargeJumpController : MonoBehaviour
+public class ChargeJumpController : MonoBehaviour
 {
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] private CommandContainer commandContainer;
