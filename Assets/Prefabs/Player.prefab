@@ -133,10 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659b03eb6266ab54ebabaceeb94f0d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  walkSpeedSo: {fileID: 11400000, guid: 98ce497a97ba4a348ba039cd1a890c67, type: 2}
   myRigidbody: {fileID: 4322974968072804207}
   commandContainer: {fileID: 280547498780624006}
-  chargingMoveSpeedFactor: 0.5
+  chargingWalkSpeedFactor: 0.5
   _groundChecker: {fileID: 1935485833031811998}
 --- !u!114 &4322974968072804204
 MonoBehaviour:

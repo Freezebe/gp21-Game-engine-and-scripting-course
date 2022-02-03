@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class WalkController : MonoBehaviour
 {
-    [SerializeField] public float moveSpeed = 5f;
+    // [SerializeField] public float walkSpeed = 5f;
+    [SerializeField] private WalkSpeedSO walkSpeedSo;
     [SerializeField] public Rigidbody myRigidbody;
     [SerializeField] private CommandContainer commandContainer;
-    [SerializeField] private float chargingMoveSpeedFactor = 0.5f;
+    [SerializeField] private float chargingWalkSpeedFactor = 0.5f;
     [SerializeField] private GroundChecker _groundChecker;
 
     void Update()
@@ -15,9 +16,9 @@ public class WalkController : MonoBehaviour
 
     private void HandleWalking()
     {
-        var currentMoveSpeed = moveSpeed;
+        var currentMoveSpeed = walkSpeedSo.WalkSpeed;
         if (commandContainer.jumpCommand && _groundChecker.Isgrounded)
-            currentMoveSpeed *= chargingMoveSpeedFactor;
+            currentMoveSpeed *= chargingWalkSpeedFactor;
         
         myRigidbody.velocity= new Vector3(commandContainer.walkCommand * currentMoveSpeed,myRigidbody.velocity.y,0);
     }
