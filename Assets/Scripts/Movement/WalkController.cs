@@ -6,7 +6,7 @@ public class WalkController : MonoBehaviour
     [SerializeField] private WalkSpeedSO walkSpeedSo;
     [SerializeField] public Rigidbody myRigidbody;
     [SerializeField] private CommandContainer commandContainer;
-    [SerializeField] private float chargingWalkSpeedFactor = 0.5f;
+    //[SerializeField] private float chargingWalkSpeedFactor = 0.5f;
     [SerializeField] private GroundChecker _groundChecker;
 
     void Update()
@@ -18,7 +18,7 @@ public class WalkController : MonoBehaviour
     {
         var currentMoveSpeed = walkSpeedSo.WalkSpeed;
         if (commandContainer.jumpCommand && _groundChecker.Isgrounded)
-            currentMoveSpeed *= chargingWalkSpeedFactor;
+            currentMoveSpeed *= walkSpeedSo.ChargingWalkSpeedFactor;
         
         myRigidbody.velocity= new Vector3(commandContainer.walkCommand * currentMoveSpeed,myRigidbody.velocity.y,0);
     }
