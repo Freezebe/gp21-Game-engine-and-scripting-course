@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2846350404536690566}
   - component: {fileID: 1935485833031811998}
   - component: {fileID: 1454095199}
+  - component: {fileID: 1454095213}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -136,7 +137,6 @@ MonoBehaviour:
   walkSpeedSo: {fileID: 11400000, guid: 98ce497a97ba4a348ba039cd1a890c67, type: 2}
   myRigidbody: {fileID: 4322974968072804207}
   commandContainer: {fileID: 280547498780624006}
-  chargingWalkSpeedFactor: 0.5
   _groundChecker: {fileID: 1935485833031811998}
 --- !u!114 &4322974968072804204
 MonoBehaviour:
@@ -150,10 +150,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746ebf035ed27e24fb1f43d22d8dfed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidbody: {fileID: 0}
+  myRigidbody: {fileID: 4322974968072804207}
   commandContainer: {fileID: 280547498780624006}
   jumpForce: 500
   groundChecker: {fileID: 1935485833031811998}
+  onJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameObjectToggler, Assembly-CSharp
+        m_MethodName: ToggleGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2846350404536690566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,12 +181,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4423aee08be9d8e4b9e628be69149115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidbody: {fileID: 0}
+  myRigidbody: {fileID: 4322974968072804207}
   commandContainer: {fileID: 280547498780624006}
   minimumJumpForce: 100
   maximumJumpForce: 1000
   chargeTime: 1
   groundChecker: {fileID: 1935485833031811998}
+  onChargeJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1454095213}
+        m_TargetAssemblyTypeName: ScaleAnimation, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1935485833031811998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +231,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94356cb58da423844b16a5f80f19ca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1454095213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322974968072804196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d88e71363fb0054e87b9a1367b3bdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDuration: 1
+  scaleAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.7061365
+      outSlope: 2.7061365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.06475894
+    - serializedVersion: 3
+      time: 0.50097656
+      value: 1
+      inSlope: -0.0000071022628
+      outSlope: -0.0000071022628
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11051694
+      outWeight: 0.08408769
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -3.2858813
+      outSlope: -3.2858813
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.053541925
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6954550819250076597
 GameObject:
   m_ObjectHideFlags: 0

@@ -179,7 +179,6 @@ MonoBehaviour:
   walkSpeedSo: {fileID: 11400000, guid: 98ce497a97ba4a348ba039cd1a890c67, type: 2}
   myRigidbody: {fileID: 4664065951600233901}
   commandContainer: {fileID: 3029537817168688480}
-  chargingWalkSpeedFactor: 0.5
   _groundChecker: {fileID: 7597877953234835159}
 --- !u!114 &7597877953234835159
 MonoBehaviour:
